@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,19 +12,26 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-// Default page of Laravel
-Route::get('/', function () {
-    return view('welcome');
-});
+// */
+// // Default page of Laravel
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-//MyPage - string
-Route::get('/home', function ()
- {
+// //MyPage - string
+// Route::get('/home', function ()
+//  {
 
-   return view ("home"); 
+//    return view ("home"); 
 
-});
+// });
+
+//Laravel 8 -- New Way
+Route::get('/products', [ProductsController::class,'index']);
+
+
+
+//##################### EXAMPLES #######################################
 
 // //MyPage - array (JSON)
 
