@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +12,18 @@ use App\Http\Controllers\ProductsController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+
+
+*/
+Route::get('/', [PageController::class,'index' ] );
+Route::get('/about', [PageController::class,'about']);
+
+
+
+#########################################################################################################
+
+//PRODUCT CONTROLER
+
 // */
 // // Default page of Laravel
 // Route::get('/', function () {
@@ -27,7 +39,7 @@ use App\Http\Controllers\ProductsController;
 // });
 
 //Laravel 8 -- New Way
-Route::get('/products', [ProductsController::class,'index']);
+//Route::get('/products', [ProductsController::class,'index']);
 
 //Gets products from array
 //Route::get('/products/{name}',[ProductsController::class,'show']);
@@ -39,7 +51,7 @@ Route::get('/products', [ProductsController::class,'index']);
 // Route::get('/products/{name}', [ProductsController::class,'show'])->where('name', '[a-zA-Z]+');
 
 
-
+#########################################################
 //Gets page via name and id
 //Like page.com/product/2
 
@@ -50,8 +62,10 @@ Route::get('/products', [ProductsController::class,'index']);
   
 //     ]);
 
+###############################################################
 
-
+//Route::get('/products',[ProductsController::class, 'index'])->name('products');
+      
 
 
 
