@@ -6,6 +6,13 @@
     </li>
 
     <li>
-        <a href="/about"  class = "{{ request()->is('about' ? 'active' : '') }}"> About</a>                
+        <a href="/about"  class = "{{ request()->is('about' ? 'active' : '') }}"> About</a>   
+
+    </li>
+    <li>
+
+        <a href="/posts"  class = "{{ request()->is('about' ? 'active' : '') }}"> Posts</a>                
+
+
     </li>
 </ul>
